@@ -19,9 +19,13 @@ export default function App() {
           marginBottom: 10,
         }}
       >
-        My Button Component
+        Props
       </Text>
-      <MyButton />
+      <MyButton title="pprroopp" onPress={() => alert("props")} />
+      <MyButton title="pprroopp" onPress={() => alert("children")}>
+        Children Props
+      </MyButton>
+      <MyButton onPress={() => alert("default")} />
     </View>
   );
 }
