@@ -1,7 +1,7 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-import MyButton from "./components/MyButton";
+import { View } from "react-native";
+import EventButton from "./components/EventButton";
+import EventInput from "./components/EventInput";
 
 export default function App() {
   return (
@@ -13,19 +13,8 @@ export default function App() {
         justifyContent: "center",
       }}
     >
-      <Text
-        style={{
-          fontSize: 30,
-          marginBottom: 10,
-        }}
-      >
-        Props
-      </Text>
-      <MyButton title="pprroopp" onPress={() => alert("props")} />
-      <MyButton title="pprroopp" onPress={() => alert("children")}>
-        Children Props
-      </MyButton>
-      <MyButton onPress={() => alert("default")} />
+      <EventButton />
+      <EventInput />
     </View>
   );
 }
